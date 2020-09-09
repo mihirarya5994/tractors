@@ -1,0 +1,141 @@
+<div class="dashboard-component-2" *ngIf="!loading">
+  <div class="content">
+
+    <div id="myVideo" class="video-container">
+
+      <video id="myVid" [src]='modelimg1' autoplay loop controls></video>
+      <!-- <img [src]='modelimg1'> -->
+      <!-- <div class="carousel">
+        <div class="slider" #slider>
+          <div class="slide">
+            <img [src]='modelimg1'>
+          </div>
+          <div class="slide">
+            <img [src]='modelimg2'>
+          </div>
+          <div class="slide">
+            <img [src]='modelimg3'>
+          </div>
+        </div>
+      </div> -->
+    </div>
+
+    <div class="decider d-flex">
+      <div class="lang-select" *ngIf="isXP">
+        <form [formGroup]="OptionForm">
+          <select formControlName="selected">
+            <option value="English">English</option>
+            <option value="Hindi">हिंदी</option>
+            <option  value="Telugu">తెలుగు</option>
+            <option  value="Tamil">தமிழ்</option>
+          </select>
+        </form>
+      </div>
+      <div class="lang-select" *ngIf="isSP">
+        <form [formGroup]="OptionForm">
+          <select formControlName="selected">
+            <option value="English">English</option>
+            <option value="Hindi">हिंदी</option>
+            <option value="Marathi">मराठी</option>
+          </select>
+        </form>
+      </div>
+
+
+
+
+      <div class="call-button text-center">
+        <button type="button" (click)="missedcall()">{{optionvalue?.Call}}</button>
+      </div>
+      <div class="modal" id="exampleModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header text-center">
+              <h5>{{optionvalue?.Call}}</h5>
+              <button type="button" class="close" (click)="missedcallclose()">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div *ngFor="let zonenumber of zone?.zone, let i = index">
+                <div class="option">
+                  <div (click)='ATZoneTrack(i, zonenumber)'>{{zonalstate[i]}}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="image-section text-center" *ngIf="isXP" [class.tamilCss]="tamilCss">
+    <p style="padding-left: 25px; font-size: 1.8em;">{{optionvalue?.TRACS}}</p>
+    <p id="it">{{optionvalue?.DESC_1}}</p>
+    <p id="it">{{optionvalue?.DESC_2}}</p>
+    <div class="tracters d-flex">
+      <div class="tractor-range text-center" *ngFor="let img of imgs" (click)="gotodetails(img)">
+        <div class="display">
+          <img src={{img.img}}>
+          <!-- <p>{{img.desc}}</p> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="image-section text-center" *ngIf="isSP">
+    <p style="font-size: 1.8em;">{{optionvalue?.TRACS}}</p>
+    <p id="it">{{optionvalue?.DESC_2}}</p>
+    <div class="tracters d-flex">
+      <div class="tractor-range text-center" *ngFor="let img of imgs2" (click)="gotodetails(img)">
+        <div class="display">
+          <img src={{img.img}}>
+          <!-- <p>{{img.desc}}</p> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="quiz-block">
+    <div class="quiz-text">
+      {{optionvalue?.Quiz_text}}
+    </div>
+    <div class="quiz-btn" (click)="gotoquiz()">
+      {{optionvalue?.Play}}
+    </div>
+    <div class="link" (click)="gototnc()">
+      <u>{{optionvalue?.tnc}}</u>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="foot dealer" (click)="gotodealer()">
+      <img src="assets/images/mahindra/noun_Store.svg">
+      <div class="foot-text">
+        <p>{{optionvalue?.dealer1}}</p>
+        <p>{{optionvalue?.dealer2}}</p>
+      </div>
+    </div>
+    <div class="foot share" (click)="dwld()">
+      <img src="assets/images/mahindra/noun_Download.svg">
+      <div class="foot-text">
+        <p>{{optionvalue?.download1}}</p>
+        <p>{{optionvalue?.download2}}</p>
+      </div>
+      <!-- <div class="modal" id="exampleModal2">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div>
+                <div class="text" *ngFor="let list of lists" (click)="selecttractor(list.value)">
+                  {{list.name}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+
+  </div>
+</div>

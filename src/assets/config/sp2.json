@@ -1,0 +1,80 @@
+{
+  "English": {
+      "Img1": "assets/images/mahindra/videos/SP.mp4",
+      "BRAND": "MAHINDRA SP PLUS SERIES",
+      "tnc": "T&C Apply",
+      "DESC_2": "Power Aur Performance ki Guarantee",
+      "CONTENT": "Mahindra Tractors is the world's No.1 tractor company by volumes and India's no. 1 tractor manufacturer since over 30 years. Our... tractors support the evolution of the of the Indian agricultural landscape with innova... tions and technological advancements. We understand what... farmers need and accordingly deliver technological innovations too",
+      "CONTENT_1": "With best-in-class Fuel efficiency, Lowest maintenance costs, Minimum effort & Maximum comfort, Mahindra XP Plus series is without a doubt smartest choice for the farmer with maximum potential of Earnings PLUS ",
+      "NUMBER": "7097197093",
+      "TRACS": "SP Plus Series",
+      "Call": "Give a Missed Call",
+      "Quiz_text" : "How much do you know about SP series?",
+      "Play": "PLAY NOW",
+      "dealer1": "DEALER",
+      "dealer2": "LOCATOR",
+      "download1": "DOWNLOAD",
+      "download2": "BROCHURE"
+  },
+  "Hindi": {
+      "Img1": "assets/images/mahindra/videos/SP.mp4",
+      "BRAND": "महिंद्रा SP PLUS सीरीज़.",
+      "tnc": "नियम और शर्तें लागू",
+      "DESC_2": "पावर और परफ़ॉर्मेंस की गारंटी",
+      "CONTENT": "Mahindra Tractors is the world's No.1 tractor company by volumes and India's no. 1 tractor manufacturer since over 30 years. Our... tractors support the evolution of the of the Indian agricultural landscape with innova... tions and technological advancements. We understand what... farmers need and accordingly deliver technological innovations too",
+      "CONTENT_1": "श्रेणी में ईंधन की बेहतरीन बचत, मेंटेनेंस के कम ख़र्च, कम मेहनत और अधिकतम आराम के साथ यही है वह ट्रैक्टर जो कभी समझौता नहीं करता और आपको हर चीज़ मिलती है बेहतरीन.",
+      "NUMBER": "7097197054",
+      "TRACS": "SP प्लस सीरीज़",
+      "Call": "मिस्ड कॉल दीजिये",
+      "Quiz_text" : "आप SP शृंखला के बारे में कितना जानते हैं?",
+      "Play": "अब खेलें",
+      "dealer1": "डीलर का",
+      "dealer2": "पता लगायें",
+      "download1": "ब्रोशर",
+      "download2": "डाउनलोड करें"
+  },
+  "Marathi": {
+      "Img1": "assets/images/mahindra/videos/SP.mp4",
+      "BRAND": "महिंद्रा SP PLUS सीरीज़.",
+      "tnc": "नियम व शर्तें लागू",
+      "DESC_2": "पॉवर आणि परफॉर्मन्सची गॅरंटी",
+      "CONTENT": "Mahindra Tractors is the world's No.1 tractor company by volumes and India's no. 1 tractor manufacturer since over 30 years. Our... tractors support the evolution of the of the Indian agricultural landscape with innova... tions and technological advancements. We understand what... farmers need and accordingly deliver technological innovations too",
+      "CONTENT_1":"",
+      "NUMBER": "7097197163",
+      "TRACS": "SP प्लस सिरीज",
+      "Call": "मिस्ड कॉल करा",
+      "Quiz_text": "SP मालीकेबद्दल आपल्याला किती माहिती आहे?",
+      "Play": "आता खेळा",
+      "dealer1": "विक्रेता",
+      "dealer2": "शोधक",
+      "download1": "डाउनलोड",
+      "download2": "ब्रोशर"
+  },
+
+  "Missedcall": {
+      "zone": [
+        "8367797023",
+        "8367797022",
+        "7097197115",
+        "8367797021"
+      ],
+      "English" : [
+        "Bihar",
+        "Karnataka",
+        "Madhya Pradesh",
+        "Maharashtra"
+      ],
+      "Hindi" : [
+        "बिहार",
+        "कर्नाटक",
+        "मध्य प्रदेश",
+        "महाराष्ट्रा"
+      ],
+      "Marathi" : [
+        "बिहार",
+        "कर्नाटक",
+        "मध्य प्रदेश",
+        "महाराष्ट्रा"
+      ]
+    }
+}

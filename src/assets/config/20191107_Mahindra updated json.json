@@ -1,0 +1,546 @@
+{
+  "questions": [
+    {
+      "eventId": "mahindra",
+      "noOfAnswer": "1",
+      "sOn": "2019-10-11T13:30:00.000Z",
+      "eOn": "2019-11-10T16:30:00.000Z",
+      "q_eng": "Mahindra XP plus mein hai …….. Shandaar aur ……… Dumdaar",
+      "opt_eng": [
+        {
+          "id": "a",
+          "desc": "Takat, performance",
+          "mediaType": "text"
+        },
+        {
+          "id": "b",
+          "desc": "Mileage, Power",
+          "mediaType": "text"
+        },
+        {
+          "id": "c",
+          "desc": "Looks, Design",
+          "mediaType": "text"
+        },
+        {
+          "id": "d",
+          "desc": "Design, Power",
+          "mediaType": "text"
+        }
+      ],
+      "playerId": "default",
+      "type": "quiz",
+      "category": "DEFAULT",
+      "points": "50",
+      "ppoints": "0",
+      "duration": "45",
+      "level": 1,
+      "answer": [
+        "b"
+      ],
+      "q_hin": "महिंद्रा XP  प्लस में है ………..शानदार और ……….दमदार",
+      "opt_hin": [
+        {
+          "id": "a",
+          "desc": "ताकत, प्रदर्शन",
+          "mediaType": "text"
+        },
+        {
+          "id": "b",
+          "desc": "माइलेज, पावर",
+          "mediaType": "text"
+        },
+        {
+          "id": "c",
+          "desc": "लुक्स, डिज़ाइन",
+          "mediaType": "text"
+        },
+        {
+          "id": "d",
+          "desc": "डिज़ाइन, पावर",
+          "mediaType": "text"
+        }
+      ],
+      "q_tel": "మ హీంద్రా XP ప్లస్‌లో అద్భుతమైన……….. మరియు మహోన్నతమైన ……….. ఉన్నది",
+      "opt_tel": [
+        {
+          "id": "a",
+          "desc": "శక్తి, ప్రదర్శన",
+          "mediaType": "text"
+        },
+        {
+          "id": "b",
+          "desc": "మైలేజ్‌, పవర్‌",
+          "mediaType": "text"
+        },
+        {
+          "id": "c",
+          "desc": "లుక్స్‌, ఇంజన్‌ ",
+          "mediaType": "text"
+        },
+        {
+          "id": "d",
+          "desc": "డిజైన్‌, పవర్‌  ",
+          "mediaType": "text"
+        }
+      ],
+      "q_tam": "மஹிந்திரா XP பிளஸ்-ல்உள்ளதுஅழகான …… மற்றும்வலுவான …….",
+      "opt_tam": [
+        {
+          "id": "a",
+          "desc": "வலிமை, செயல்திறன்",
+          "mediaType": "text"
+        },
+        {
+          "id": "b",
+          "desc": "மைலேஜ், பவர்",
+          "mediaType": "text"
+        },
+        {
+          "id": "c",
+          "desc": "லுக்ஸ், டிசைன்",
+          "mediaType": "text"
+        },
+        {
+          "id": "d",
+          "desc": "டிசைன், பவர்",
+          "mediaType": "text"
+        }
+      ]
+    },
+    {
+      "eventId": "mahindra",
+      "noOfAnswer": "1",
+      "sOn": "2019-10-11T13:30:00.000Z",
+      "eOn": "2019-11-10T16:30:00.000Z",
+      "q_eng": "Mahindra XP plus kin baton mein plus hai?",
+      "opt_eng": [
+        {
+          "id": "a",
+          "desc": "Mileage",
+          "mediaType": "text"
+        },
+        {
+          "id": "b",
+          "desc": "Power",
+          "mediaType": "text"
+        },
+        {
+          "id": "c",
+          "desc": "Warranty",
+          "mediaType": "text"
+        },
+        {
+          "id": "d",
+          "desc": "All of the above",
+          "mediaType": "text"
+        }
+      ],
+      "playerId": "default",
+      "type": "quiz",
+      "category": "DEFAULT",
+      "points": "50",
+      "ppoints": "0",
+      "duration": "45",
+      "level": 1,
+      "answer": [
+        "d"
+      ],
+      "q_hin": "महिंद्रा XP प्लस किन बातों में प्लस है?",
+      "opt_hin": [
+        {
+          "id": "a",
+          "desc": "माइलेज",
+          "mediaType": "text"
+        },
+        {
+          "id": "b",
+          "desc": "पावर",
+          "mediaType": "text"
+        },
+        {
+          "id": "c",
+          "desc": "वारंटी",
+          "mediaType": "text"
+        },
+        {
+          "id": "d",
+          "desc": "उपरोक्त सभी",
+          "mediaType": "text"
+        }
+      ],
+      "q_tel": "మహీంద్రా ప్లస్  XPలో ఏవిషయాలలో ప్లస్‌?",
+      "opt_tel": [
+        {
+          "id": "a",
+          "desc": "మైలేజ్‌",
+          "mediaType": "text"
+        },
+        {
+          "id": "b",
+          "desc": "పవర్‌",
+          "mediaType": "text"
+        },
+        {
+          "id": "c",
+          "desc": "వారెంటి ",
+          "mediaType": "text"
+        },
+        {
+          "id": "d",
+          "desc": "పైన పేర్కొన్నవన్నీ ",
+          "mediaType": "text"
+        }
+      ],
+      "q_tam": "மஹிந்திரா XP -ல்எதுபிளஸ்ஆகஉள்ளது?",
+      "opt_tam": [
+        {
+          "id": "a",
+          "desc": "மைலேஜ்",
+          "mediaType": "text"
+        },
+        {
+          "id": "b",
+          "desc": "பவர்",
+          "mediaType": "text"
+        },
+        {
+          "id": "c",
+          "desc": "வாரன்டி",
+          "mediaType": "text"
+        },
+        {
+          "id": "d",
+          "desc": "மேலேயுள்ளஅனைத்தும்",
+          "mediaType": "text"
+        }
+      ]
+    },
+    {
+      "eventId": "mahindra",
+      "noOfAnswer": "1",
+      "sOn": "2019-10-11T13:30:00.000Z",
+      "eOn": "2019-11-10T16:30:00.000Z",
+      "q_eng": "Mahindra XP plus mein kitne saal ki warranty hai?",
+      "opt_eng": [
+        {
+          "id": "a",
+          "desc": "4 saal",
+          "mediaType": "text"
+        },
+        {
+          "id": "b",
+          "desc": "3 saal",
+          "mediaType": "text"
+        },
+        {
+          "id": "c",
+          "desc": "6 saal",
+          "mediaType": "text"
+        },
+        {
+          "id": "d",
+          "desc": "2 saal",
+          "mediaType": "text"
+        }
+      ],
+      "playerId": "default",
+      "type": "quiz",
+      "category": "DEFAULT",
+      "points": "50",
+      "ppoints": "0",
+      "duration": "45",
+      "level": 1,
+      "answer": [
+        "c"
+      ],
+      "q_hin": "महिंद्रा XP प्लस में कितने साल की\nवारंटी है ",
+      "opt_hin": [
+        {
+          "id": "a",
+          "desc": "4 साल",
+          "mediaType": "text"
+        },
+        {
+          "id": "b",
+          "desc": "3 साल",
+          "mediaType": "text"
+        },
+        {
+          "id": "c",
+          "desc": "6 साल",
+          "mediaType": "text"
+        },
+        {
+          "id": "d",
+          "desc": "2 साल",
+          "mediaType": "text"
+        }
+      ],
+      "q_tel": "మహీంద్రా XP ప్లస్‌ కు ఎన్ని సంవత్సరాల వారెంటి ఉన్నది",
+      "opt_tel": [
+        {
+          "id": "a",
+          "desc": "4 సంవత్సరాలు",
+          "mediaType": "text"
+        },
+        {
+          "id": "b",
+          "desc": "3 సంవత్సరాలు",
+          "mediaType": "text"
+        },
+        {
+          "id": "c",
+          "desc": "6సంవత్సరాలు",
+          "mediaType": "text"
+        },
+        {
+          "id": "d",
+          "desc": "2 సంవత్సరాలు",
+          "mediaType": "text"
+        }
+      ],
+      "q_tam": "மஹிந்திரா XP பிளஸ்-ல்எவ்வளவுவருடவாரன்டிகிடைக்கும்?",
+      "opt_tam": [
+        {
+          "id": "a",
+          "desc": "4 வருடங்கள்",
+          "mediaType": "text"
+        },
+        {
+          "id": "b",
+          "desc": "3 வருடங்கள்",
+          "mediaType": "text"
+        },
+        {
+          "id": "c",
+          "desc": "6 வருடங்கள்",
+          "mediaType": "text"
+        },
+        {
+          "id": "d",
+          "desc": "2 வருடங்கள்",
+          "mediaType": "text"
+        }
+      ]
+    },
+    {
+      "eventId": "mahindra",
+      "noOfAnswer": "1",
+      "sOn": "2019-10-11T13:30:00.000Z",
+      "eOn": "2019-11-10T16:30:00.000Z",
+      "q_eng": "Mahindra XP plus tractors kitne HP options mein available hain?",
+      "opt_eng": [
+        {
+          "id": "a",
+          "desc": "37 HP",
+          "mediaType": "text"
+        },
+        {
+          "id": "b",
+          "desc": "44 HP",
+          "mediaType": "text"
+        },
+        {
+          "id": "c",
+          "desc": "47 HP",
+          "mediaType": "text"
+        },
+        {
+          "id": "d",
+          "desc": "All of the above",
+          "mediaType": "text"
+        }
+      ],
+      "playerId": "default",
+      "type": "quiz",
+      "category": "DEFAULT",
+      "points": "50",
+      "ppoints": "0",
+      "duration": "45",
+      "level": 1,
+      "answer": [
+        "d"
+      ],
+      "q_hin": "महिंद्रा XP प्लस किन हार्सपावर रेंज\nमें उपलब्ध है",
+      "opt_hin": [
+        {
+          "id": "a",
+          "desc": "37 HP",
+          "mediaType": "text"
+        },
+        {
+          "id": "b",
+          "desc": "44 HP",
+          "mediaType": "text"
+        },
+        {
+          "id": "c",
+          "desc": "47 HP",
+          "mediaType": "text"
+        },
+        {
+          "id": "d",
+          "desc": "उपरोक्त सभी",
+          "mediaType": "text"
+        }
+      ],
+      "q_tel": "మహీంద్రా XP ప్లస్‌ ఏ హార్స్‌వపర్‌ రేంజ్‌లో లభిస్తుంది?",
+      "opt_tel": [
+        {
+          "id": "a",
+          "desc": "37 HP",
+          "mediaType": "text"
+        },
+        {
+          "id": "b",
+          "desc": "44 HP",
+          "mediaType": "text"
+        },
+        {
+          "id": "c",
+          "desc": "47 HP",
+          "mediaType": "text"
+        },
+        {
+          "id": "d",
+          "desc": "పైన పేర్కొన్నవన్నీ",
+          "mediaType": "text"
+        }
+      ],
+      "q_tam": "மஹிந்திரா XP பிளஸ்எவ்வளவுஹார்ஸ்பவர்ரேஞ்சில்கிடைக்கிறது?",
+      "opt_tam": [
+        {
+          "id": "a",
+          "desc": "37 HP",
+          "mediaType": "text"
+        },
+        {
+          "id": "b",
+          "desc": "44 HP",
+          "mediaType": "text"
+        },
+        {
+          "id": "c",
+          "desc": "47 HP",
+          "mediaType": "text"
+        },
+        {
+          "id": "d",
+          "desc": "மேலேயுள்ளஅனைத்தும்",
+          "mediaType": "text"
+        }
+      ]
+    },
+    {
+      "eventId": "mahindra",
+      "noOfAnswer": "1",
+      "sOn": "2019-10-11T13:30:00.000Z",
+      "eOn": "2019-11-10T16:30:00.000Z",
+      "q_eng": "Mahindra XP plus tractors mein kaun sa gear box\nhai?",
+      "opt_eng": [
+        {
+          "id": "a",
+          "desc": "Sliding Mesh",
+          "mediaType": "text"
+        },
+        {
+          "id": "b",
+          "desc": "Constant Mesh",
+          "mediaType": "text"
+        },
+        {
+          "id": "c",
+          "desc": "Synchro Mesh",
+          "mediaType": "text"
+        },
+        {
+          "id": "d",
+          "desc": "All of the above",
+          "mediaType": "text"
+        }
+      ],
+      "playerId": "default",
+      "type": "quiz",
+      "category": "DEFAULT",
+      "points": "50",
+      "ppoints": "0",
+      "duration": "45",
+      "level": 1,
+      "answer": [
+        "b"
+      ],
+      "q_hin": "महिंद्रा XP प्लस में कौनसा गियर\nबॉक्स है  ",
+      "opt_hin": [
+        {
+          "id": "a",
+          "desc": "स्लाइडिंग मेश",
+          "mediaType": "text"
+        },
+        {
+          "id": "b",
+          "desc": "कांस्टेंट मेश",
+          "mediaType": "text"
+        },
+        {
+          "id": "c",
+          "desc": "सिंक्रो मेश",
+          "mediaType": "text"
+        },
+        {
+          "id": "d",
+          "desc": "उपरोक्त सभी",
+          "mediaType": "text"
+        }
+      ],
+      "q_tel": "మహీంద్రా XP ప్లస్‌ లో ఏ గేర్‌ బాక్స్ ఉన్నది ",
+      "opt_tel": [
+        {
+          "id": "a",
+          "desc": "స్లైడింగ్‌ మెష్‌",
+          "mediaType": "text"
+        },
+        {
+          "id": "b",
+          "desc": "కాస్టెంట్‌ మెష్‌",
+          "mediaType": "text"
+        },
+        {
+          "id": "c",
+          "desc": "సిక్రో మెష్‌ ",
+          "mediaType": "text"
+        },
+        {
+          "id": "d",
+          "desc": "పై వాటిలో ఏది లేదు",
+          "mediaType": "text"
+        }
+      ],
+      "q_tam": "மஹிந்திரா XP பிளஸ்-ல்உள்ளகியர்பாக்ஸ்எது?",
+      "opt_tam": [
+        {
+          "id": "a",
+          "desc": "ஸ்லைடிங்மெஷ்",
+          "mediaType": "text"
+        },
+        {
+          "id": "b",
+          "desc": "கான்ஸ்டன்ட்மெஷ்",
+          "mediaType": "text"
+        },
+        {
+          "id": "c",
+          "desc": "சிங்க்ரோமெஷ்",
+          "mediaType": "text"
+        },
+        {
+          "id": "d",
+          "desc": "இவைகளில்எதுவுமில்லை",
+          "mediaType": "text"
+        }
+      ]
+    }
+  ],
+  "sOn": "2019-10-11T13:30:00.000Z",
+  "eOn": "2019-11-30T16:30:00.000Z"
+}

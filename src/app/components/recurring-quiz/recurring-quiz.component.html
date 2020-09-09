@@ -1,0 +1,174 @@
+<div class="recurring-quiz-component" *ngIf="!showQuizResults && !loading">
+  <div class="content">
+    <!-- <button type="button" (click)=open()>Show</button> -->
+    <div class="modal" id="exampleModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <!-- <h5 class="modal-title">Your Score</h5> -->
+          </div>
+          <div class="modal-body text-center">
+            <div class="blob">
+              <img [src]="Image">
+              <!-- <div class="user-score">
+                  <h3><span>{{user_score}}</span>/{{max_score}}</h3>
+                </div> -->
+            </div>
+            <div class="blob-text">
+              <div class="win-text" style="color: #2A8900;" *ngIf="won && English">
+                <h2>Congratulations!</h2>
+              </div>
+              <div class="win-text" style="color: #2A8900;" *ngIf="won && Hindi">
+                <h2>बधाई हो!</h2>
+              </div>
+              <div class="win-text" style="color: #2A8900;" *ngIf="won && Marathi">
+                <h2>अभिनंदन!</h2>
+              </div>
+              <div class="win-text" style="color: #2A8900;" *ngIf="won && Telugu">
+                <h2>అభినందనలు!</h2>
+              </div>
+              <div class="win-text" style="color: #2A8900;" *ngIf="won && Tamil">
+                <h2>வாழ்த்துக்கள்!</h2>
+              </div>
+              <div class="win-text" style="color: #E51937;" *ngIf="!won && English">
+                <h2>Sorry!</h2>
+              </div>
+              <div class="win-text" style="color: #E51937;" *ngIf="!won && Hindi">
+                <h2>माफ़ कीजिये!</h2>
+              </div>
+              <div class="win-text" style="color: #E51937;" *ngIf="!won && Marathi">
+                <h2>क्षमस्व!</h2>
+              </div>
+              <div class="win-text" style="color: #E51937;" *ngIf="!won && Telugu">
+                <h2>క్షమించండి</h2>
+              </div>
+              <div class="win-text" style="color: #E51937;" *ngIf="!won && Tamil">
+                <h2>மன்னிக்கவும்</h2>
+              </div>
+              {{user_text2}}
+            </div>
+          </div>
+          <div class="modal-footer text-center">
+            <button type="button" class="btn btn-primary btn-lg" (click)="gotoQuiz()"
+              style="margin-bottom: 10px;">{{btn_text}}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="text-center">
+        <img src="assets/images/saavn/main.png">
+      </div> -->
+
+    <div class="quiz-transperent-block">
+      <!-- <div class="header" *ngIf="quiz.questions.length >= currentQuestionIndex" >
+        <div class="top">Question</div>
+        <div class="bottom">{{currentQuestionIndex}} of {{quiz.questions.length}}</div>
+      </div> -->
+      <div class="level-header text-center" *ngIf="English">
+        <div class="qcount">Question {{currentQuestionIndex}}/{{quiz.questions.length}}</div>
+      </div>
+      <div class="level-header text-center" *ngIf="Hindi">
+        <div class="qcount">प्रश्न {{currentQuestionIndex}}/{{quiz.questions.length}}</div>
+      </div>
+      <div class="level-header text-center" *ngIf="Marathi">
+        <div class="qcount">प्रश्न {{currentQuestionIndex}}/{{quiz.questions.length}}</div>
+      </div>
+      <div class="level-header text-center" *ngIf="Telugu">
+        <div class="qcount">
+          ప్రశ్న {{currentQuestionIndex}}/{{quiz.questions.length}}</div>
+      </div>
+      <div class="level-header text-center" *ngIf="Tamil">
+        <div class="qcount">கேள்வி {{currentQuestionIndex}}/{{quiz.questions.length}}</div>
+      </div>
+      <hr />
+      <div class="desc" *ngIf="English">
+        <p class="descTxt">{{ currentQuestion?.q_eng }}</p>
+        
+      </div>
+      <div class="desc" *ngIf="Hindi">
+        <p class="descTxt">{{ currentQuestion?.q_hin }}</p>
+        
+      </div>
+      <div class="desc" *ngIf="Marathi">
+        <p class="descTxt">{{ currentQuestion?.q_mar }}</p>
+        
+      </div>
+      <div class="desc" *ngIf="Telugu">
+        <p class="descTxt">{{ currentQuestion?.q_tel }}</p>
+        
+      </div>
+      <div class="desc" *ngIf="Tamil">
+        <p class="descTxt"> {{ currentQuestion?.q_tam }}</p>
+       
+      </div>
+
+      <!-- <div class="state-text correct" *ngIf="currentQuestion && currentQuestion?.isCorrectAnswer === true">Correct Answer.</div> -->
+      <!-- <div class="state-text incorrect" *ngIf="currentQuestion && currentQuestion?.isCorrectAnswer === false">Wrong Answer.</div> -->
+      <!-- <div class="state-text" *ngIf="
+            currentQuestion &&
+            currentQuestion?.duration <= 0 &&
+            !(currentQuestion?.userAnswer && currentQuestion?.userAnswer?.length)
+          ">
+          You have not answered.
+        </div> -->
+      <div class="vote-block" *ngIf="English">
+        <button class="option" *ngFor="let option of currentQuestion?.opt_eng; let i = index"
+          [class.selected]="option.desc === selectedOption" (click)="selectOption(option)"
+          [disabled]="selectedOption?.length">
+          {{ option.desc }}
+        </button>
+        <div class="submit" *ngIf="enableSubmit" (click)="submitQuiz()">
+          <button type="button" class="btn btn-primary btn-lg">Submit</button>
+        </div>
+      </div>
+      <div class="vote-block" *ngIf="Hindi">
+        <button class="option" *ngFor="let option of currentQuestion?.opt_hin; let i = index"
+          [class.selected]="option.desc === selectedOption" (click)="selectOption(option)"
+          [disabled]="selectedOption?.length">
+          {{ option.desc }}
+        </button>
+        <div class="submit" *ngIf="enableSubmit" (click)="submitQuiz()">
+          <button type="button" class="btn btn-primary btn-lg">{{submit}}</button>
+        </div>
+      </div>
+      <div class="vote-block" *ngIf="Marathi">
+        <button class="option" *ngFor="let option of currentQuestion?.opt_mar; let i = index"
+          [class.selected]="option.desc === selectedOption" (click)="selectOption(option)"
+          [disabled]="selectedOption?.length">
+          {{ option.desc }}
+        </button>
+        <div class="submit" *ngIf="enableSubmit" (click)="submitQuiz()">
+          <button type="button" class="btn btn-primary btn-lg">{{submit}}</button>
+        </div>
+      </div>
+      <div class="vote-block" *ngIf="Telugu">
+        <button class="option" *ngFor="let option of currentQuestion?.opt_tel; let i = index"
+          [class.selected]="option.desc === selectedOption" (click)="selectOption(option)"
+          [disabled]="selectedOption?.length">
+          {{ option.desc }}
+        </button>
+        <div class="submit" *ngIf="enableSubmit" (click)="submitQuiz()">
+          <button type="button" class="btn btn-primary btn-lg">{{submit}}</button>
+        </div>
+      </div>
+      <div class="vote-block" *ngIf="Tamil">
+        <button class="option" *ngFor="let option of currentQuestion?.opt_tam; let i = index"
+          [class.selected]="option.desc === selectedOption" (click)="selectOption(option)"
+          [disabled]="selectedOption?.length">
+          {{ option.desc }}
+        </button>
+        <div class="submit" *ngIf="enableSubmit" (click)="submitQuiz()">
+          <button type="button" class="btn btn-primary btn-lg">{{submit}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- <div class="text-center">
+    <img style="width: 100%" src="assets/images/saavn/Inside_Page.jpg">
+  </div> -->
+
+<!-- <div class="recurring-quiz-component" *ngIf="!loading && sms.id !== 'active' && showQuizResults"
+    style="background:rgba(0,0,0,0.5); margin: 1rem;">
+  </div> -->

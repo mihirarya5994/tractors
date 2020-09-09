@@ -1,0 +1,28 @@
+{
+  "Missedcall": {
+    "zone": [
+      "7097197163",
+      "8367797023",
+      "8367797022",
+      "7097197115",
+      "8367797021",
+      "7097197141",
+      "8367796878",
+      "7097197208",
+      "7097197054",
+      "7097197093"
+    ],
+    "English" : [
+      "Andhra Pradesh",
+      "Bihar",
+      "Karnataka",
+      "Madhya Pradesh",
+      "Maharashtra",
+      "Rajasthan",
+      "Tamil Nadu",
+      "Telangana",
+      "UP East",
+      "UP West"
+    ]
+  }
+}

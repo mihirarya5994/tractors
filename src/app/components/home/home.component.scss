@@ -1,0 +1,55 @@
+@import '~src/assets/styles/helpers/variables';
+
+.home-component {
+  color: #FFFFFF;
+  font-family: $primary-font-family;
+  font-size: $primary-font-size;
+  padding: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  // background: url(src/assets/images/saavn/BG.svg) no-repeat center center;
+  background-color: #FFFFFF;
+  background-size: 100% 100%;
+
+  bb-header{
+    box-shadow: 0.6rem 0.5rem 1rem #00000029 !important;
+  }
+  &.on-quiz {
+    background: url(src/assets/images/mahindra/quiz.png) no-repeat center center;
+    // background-color: #FFFFFF;
+    background-size: 100% 100%;
+  }
+  // &.on-thankyou {
+  //   background: url(src/assets/images/saavn/win.png) no-repeat center center;
+  //   // background-color: #FFFFFF;
+  //   background-size: 100% 100%;
+  // }
+  .content {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    &.with-Footer {
+      bottom: 60px;
+    }
+    &.without-header {
+      top: 0;
+    }
+  }
+}
+
+app-confetti {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}

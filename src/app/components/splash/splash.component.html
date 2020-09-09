@@ -1,0 +1,30 @@
+<div class="splash-component" *ngIf="!loading">
+  <!-- <div class="close" (click)="close()">
+     <img src="assets/images/small_close_icon.png">
+  </div> -->
+  <!-- <div class="splash-logo">
+     <img src="assets/images/logo_top.png">
+  </div> -->
+  <div class="top" [class.full]="initialProfile.TnC && !initialProfile.firstLogin"></div>
+  <div class="bottom" *ngIf="!initialProfile.TnC || initialProfile.firstLogin">
+    <!-- <div class="disclaimer">
+          <img src="assets/images/win.jpg">
+      </div> -->
+    <!-- <div class="disclaimer">
+      <div class="check" [class.checked]="profile.TnC" (click)="acceptTnC()"></div>
+      <div class="text">
+        By continuing you agree with
+        <span class="emphasis"  (click)="navigateToTnC()">Terms & Conditions</span>.
+      </div>
+    </div> -->
+    <!-- <div
+      class="play-btn"
+      *ngIf="profile.TnC"
+      data-aos="fade-up"
+      data-aos-anchor-placement="center-bottom"
+    > -->
+      <!-- <div class="play" (click)="play()">PROCEED</div> -->
+      <!-- <img src="assets/images/prizes_label.png"> -->
+    <!-- </div> -->
+  </div>
+</div>

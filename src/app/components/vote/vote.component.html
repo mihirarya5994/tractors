@@ -1,0 +1,429 @@
+<div class="vote-component" *ngIf="!loading">
+  <div class="content">
+
+    <div id="myVideo" class="video-container">
+      <img [src]='modelimg'>
+    </div>
+
+    <div class="decider d-flex">
+      <div class="lang-select" *ngIf="isXP">
+        <form [formGroup]="OptionForm">
+          <select formControlName="selected">
+            <option value="English">English</option>
+            <option value="Hindi">हिंदी</option>
+            <option value="Telugu">తెలుగు</option>
+            <option value="Tamil">தமிழ்</option>
+          </select>
+        </form>
+      </div>
+      <div class="lang-select" *ngIf="isSP">
+        <form [formGroup]="OptionForm">
+          <select formControlName="selected">
+            <option value="English">English</option>
+            <option value="Hindi">हिंदी</option>
+            <option value="Marathi">मराठी</option>
+          </select>
+        </form>
+      </div>
+      <div class="call-button text-center">
+        <button type="button" (click)="missedcall()">
+          <p>{{modelspecs?.Call}}</p>
+        </button>
+      </div>
+      <div class="modal" id="exampleModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header text-center">
+              <h5>{{modelspecs?.Call}}</h5>
+              <button type="button" class="close" (click)="missedcallclose()">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div *ngFor="let zonenumber of zone?.zone, let i = index">
+                <div class="option">
+                  <div (click)="ATZoneTrack(i, zonenumber)">{{zonalstate[i]}}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="brand text-center">
+      <div class="brand-name">
+        <h2>
+          {{modelspecs?.Model}}
+        </h2>
+      </div>
+      <div class="brand-desc text-center">
+        <p>{{optionvalue?.DESC_1}}</p>
+        <p>{{optionvalue?.DESC_2}}</p>
+      </div>
+    </div>
+    <div class="lang text-center">
+      <p>{{modelspecs?.Desc}}</p>
+    </div>
+
+    <div class="list">
+      <div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne" (click)="gotofeat()">
+            <div class="icon" *ngIf="isfeat">
+              <img src="assets/images/mahindra/Show.svg">
+            </div>
+            <div class="icon" *ngIf="!isfeat">
+              <img src="assets/images/mahindra/minus.svg">
+            </div>
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button">
+                {{modelspecs?.Features}}
+              </button>
+            </h2>
+          </div>
+
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+              <div class="d-flex">
+                <div class="image">
+                  <img *ngIf="isXP" src="assets/images/mahindra/ELSfeature.png">
+                  <img *ngIf="isSP" src="assets/images/mahindra/sp/1.png">
+                </div>
+                <div class="img-text">
+                  <h5>
+                    {{modelspecs?.Feature_1}}
+                  </h5>
+                  <p>{{modelspecs?.Feature_1_desc}}</p>
+                </div>
+              </div>
+              <div class="d-flex">
+                <div class="image">
+                  <img *ngIf="isXP" src="assets/images/mahindra/6_years_warranty.png">
+                  <img style="padding-top: 20px;"*ngIf="isSP" src="assets/images/mahindra/sp/2.png">
+                </div>
+                <div class="img-text">
+                  <h5>
+                    {{modelspecs?.Feature_2}}
+                  </h5>
+                  <p>{{modelspecs?.Feature_2_desc}}</p>
+                </div>
+              </div>
+              <div class="d-flex">
+                <div class="image">
+                  <img *ngIf="isXP" src="assets/images/mahindra/MeshTransmission.png">
+                  <img *ngIf="isSP" src="assets/images/mahindra/sp/3.png">
+                </div>
+                <div class="img-text">
+                  <h5>
+                    {{modelspecs?.Feature_3}}
+                  </h5>
+                  <p>{{modelspecs?.Feature_3_desc}}</p>
+                </div>
+              </div>
+              <div class="d-flex">
+                <div class="image">
+                  <img *ngIf="isXP" src="assets/images/mahindra/ADDChydraulics.png">
+                  <img *ngIf="isSP" src="assets/images/mahindra/sp/4.png">
+                </div>
+                <div class="img-text">
+                  <h5>
+                    {{modelspecs?.Feature_4}}
+                  </h5>
+                  <p>{{modelspecs?.Feature_4_desc}}</p>
+                </div>
+              </div>
+              <div class="d-flex">
+                <div class="image">
+                  <img *ngIf="isXP" src="assets/images/mahindra/Multidiskoilbrakes.png">
+                  <img style="padding-top: 20px;" *ngIf="isSP" src="assets/images/mahindra/sp/5.png">
+                </div>
+                <div class="img-text">
+                  <h5>
+                    {{modelspecs?.Feature_5}}
+                  </h5>
+                  <p>{{modelspecs?.Feature_5_desc}}</p>
+                </div>
+              </div>
+              <div class="d-flex">
+                <div class="image">
+                  <img *ngIf="isXP" src="assets/images/mahindra/AttractiveDesign.png">
+                  <img style="padding-top: 20px;" *ngIf="isSP" src="assets/images/mahindra/sp/6.png">
+                </div>
+                <div class="img-text">
+                  <h5>
+                    {{modelspecs?.Feature_6}}
+                  </h5>
+                  <p>{{modelspecs?.Feature_6_desc}}</p>
+                </div>
+              </div>
+              <div class="d-flex" style="margin-top: 25px;">
+                <div class="image">
+                  <img *ngIf="isXP" src="assets/images/mahindra/Ergodesign.png">
+                  <img *ngIf="isSP" src="assets/images/mahindra/sp/7.png">
+                </div>
+                <div class="img-text">
+                  <h5>
+                    {{modelspecs?.Feature_7}}
+                  </h5>
+                  <p>{{modelspecs?.Feature_7_desc}}</p>
+                </div>
+              </div>
+              <div class="d-flex" *ngIf="isXP">
+                <div class="image">
+                  <img src="assets/images/mahindra/Frontaxle.png">
+                </div>
+                <div class="img-text">
+                  <h5>
+                    {{modelspecs?.Feature_8}}
+                  </h5>
+                  <p>{{modelspecs?.Feature_8_desc}}</p>
+                </div>
+              </div>
+              <div class="d-flex" *ngIf="isXP">
+                <div class="image">
+                  <img src="assets/images/mahindra/Powersteering.png">
+                </div>
+                <div class="img-text">
+                  <h5>
+                    {{modelspecs?.Feature_9}}
+                  </h5>
+                  <p>{{modelspecs?.Feature_9_desc}}</p>
+                </div>
+              </div>
+              <div class="d-flex" *ngIf="isXP">
+                <div class="image">
+                  <img src="assets/images/mahindra/Tyres.png">
+                </div>
+                <div class="img-text">
+                  <h5>
+                    {{modelspecs?.Feature_10}}
+                  </h5>
+                  <p>{{modelspecs?.Feature_10_desc}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo" (click)="gotoapps()">
+            <div class="icon" *ngIf="isapp">
+              <img src="assets/images/mahindra/Show.svg">
+            </div>
+            <div class="icon" *ngIf="!isapp">
+              <img src="assets/images/mahindra/minus.svg">
+            </div>
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                aria-expanded="true" aria-controls="collapseTwo">
+                {{modelspecs?.Application}}
+              </button>
+            </h2>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+              <ul>
+                <li *ngFor="let apps of modelspecs?.Applications" style="color: black">
+                  {{apps}}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree" (click)="gotospecs()">
+            <div class="icon" *ngIf="isspec">
+              <img src="assets/images/mahindra/Show.svg">
+            </div>
+            <div class="icon" *ngIf="!isspec">
+              <img src="assets/images/mahindra/minus.svg">
+            </div>
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+                aria-expanded="false" aria-controls="collapseThree">
+                {{modelspecs?.Specs}}
+              </button>
+            </h2>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+
+              <table style="color: black;">
+                <tr>
+                  <td>{{modelspecs?.Spec_1}}</td>
+                  <td>{{modelspecs?.Spec_1_desc}}</td>
+                </tr>
+                <tr>
+                  <td>{{modelspecs?.Spec_2}}</td>
+                  <td>{{modelspecs?.Spec_2_desc}}</td>
+                </tr>
+                <tr>
+                  <td>{{modelspecs?.Spec_3}}</td>
+                  <td>{{modelspecs?.Spec_3_desc}}</td>
+                </tr>
+                <tr>
+                  <td>{{modelspecs?.Spec_4}}</td>
+                  <td>{{modelspecs?.Spec_4_desc}}</td>
+                </tr>
+                <tr>
+                  <td>{{modelspecs?.Spec_5}}</td>
+                  <td>{{modelspecs?.Spec_5_desc}}</td>
+                </tr>
+                <tr>
+                  <td>{{modelspecs?.Spec_6}}</td>
+                  <td>{{modelspecs?.Spec_6_desc}}</td>
+                </tr>
+                <tr>
+                  <td>{{modelspecs?.Spec_7}}</td>
+                  <td>{{modelspecs?.Spec_7_desc}}</td>
+                </tr>
+                <tr>
+                  <td>{{modelspecs?.Spec_8}}</td>
+                  <td>{{modelspecs?.Spec_8_desc}}</td>
+                </tr>
+                <tr>
+                  <td>{{modelspecs?.Spec_9}}</td>
+                  <td>{{modelspecs?.Spec_9_desc}}</td>
+                </tr>
+                <tr>
+                  <td>{{modelspecs?.Spec_10}}</td>
+                  <td>{{modelspecs?.Spec_10_desc}}</td>
+                </tr>
+                <tr>
+                  <td>{{modelspecs?.Spec_11}}</td>
+                  <td>{{modelspecs?.Spec_11_desc}}</td>
+                </tr>
+                <tr *ngIf="isXP">
+                  <td>{{modelspecs?.Spec_12}}</td>
+                  <td>{{modelspecs?.Spec_12_desc}}</td>
+                </tr>
+                <tr *ngIf="isXP">
+                  <td>{{modelspecs?.Spec_13}}</td>
+                  <td>{{modelspecs?.Spec_13_desc}}</td>
+                </tr>
+                <tr *ngIf="isXP">
+                  <td>{{modelspecs?.Spec_14}}</td>
+                  <td>{{modelspecs?.Spec_14_desc}}</td>
+                </tr>
+                <tr *ngIf="isXP">
+                  <td>{{modelspecs?.Spec_15}}</td>
+                  <td>{{modelspecs?.Spec_15_desc}}</td>
+                </tr>
+                <tr *ngIf="isXP">
+                  <td>{{modelspecs?.Spec_16}}</td>
+                  <td>{{modelspecs?.Spec_16_desc}}</td>
+                </tr>
+                <tr *ngIf="isXP">
+                  <td>{{modelspecs?.Spec_17}}</td>
+                  <td>{{modelspecs?.Spec_17_desc}}</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="button-group d-flex text-center">
+      <div class="brochure-button">
+        <button type="button" class="btn btn-danger btn-md" >Brochure</button>
+      </div>
+      <div class="quiz-button">
+        <button type="button" class="btn btn-danger btn-lg" >Play Quiz</button>
+      </div>
+      <div class="home-button">
+        <button type="button" class="btn btn-danger btn-md" >Home</button>
+      </div>
+    </div> -->
+
+
+
+
+    <!-- <div class="text-container">
+        <h4 style="color: #B0372E">{{brand}}</h4>
+        <hr style="color: white; ">
+        <p>{{maintext1}}</p> -->
+    <!-- <p>{{maintext2}} </p> -->
+    <!-- <a href="http://fullpaisavasoolsale.co.in/">KNOW MORE</a> -->
+
+    <!-- <p>{{maintext2}}</p> -->
+    <!-- </div> -->
+
+    <!-- <div class="button-wrapper">
+        <button class="btn btn-primary btn-lg" (click)=takeToQuiz()>Take Quiz</button>
+         <button class="btn btn-primary btn-lg" (click)=takeToBot()>TALK TO US</button> -->
+    <!-- <img src="assets/images/rfresh/Genie.svg">  -->
+    <!-- </div> -->
+    <!-- <div class="termsNConditions">
+        <p class="TNC-text">I agree to the <span class="highlighted" (click)='naviagteToTNC()'>Terms and
+            Conditions</span> </p>
+      </div> -->
+
+    <!-- <div class="button-wrapper-sm">
+        <div class="button-group" (click)=navigatetofb()>
+          <div class="btn-image">
+            <button class="btn btn-primary btn-lg"><img src="assets/images/saavn/fb.svg"></button>
+          </div>
+          <div class="btn-text bold">
+            <p>Facebook</p>
+          </div>
+        </div>
+        <div class="button-group" (click)=invite()>
+          <div class="btn-image">
+            <button class="btn btn-primary btn-lg"><img src="assets/images/saavn/Share.svg"></button>
+          </div>
+          <div class="btn-text bold">
+            <p>Share</p>
+          </div>
+        </div>
+        <div class="button-group" (click)=navigatetodwld()>
+          <div class="btn-image">
+            <button class="btn btn-primary btn-lg"><img src="assets/images/saavn/Download.svg"></button>
+          </div>
+          <div class="btn-text bold">
+            <p>Download</p>
+          </div>
+        </div>
+  
+      </div> -->
+
+    <!-- 
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <button class="btn btn-primary btn-block"><span>Know More</span></button>
+          </div>
+          <div class="col-6">
+            <button class="btn btn-primary  btn-block"><span>Share</span></button>
+          </div>
+        </div>
+      </div> -->
+
+  </div>
+  <!-- <div class="image-section ">
+    <div class="tracters ">
+      <div class="button-container">
+        <div class="tractor-range" (click)="dwld()">
+          <div class="text">
+            <p>{{modelspecs?.Brochure}}</p>
+          </div>
+        </div>
+        <div class="tractor-range" (click)="gotoquiz()">
+          <div class="text text-center">
+            <p>{{modelspecs?.Play}}*</p>
+          </div>
+        </div>
+        <div class="tractor-range" (click)="gotohome()">
+          <div class="text">
+            <p>{{modelspecs?.Home}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tnc text-center">
+      <p><span [ngStyle]="{'fontSize':changeTamilFont? '9px' : '' }"(click)="navigateToTnC()">{{modelspecs?.tnc}} {{modelspecs?.apply}}</span></p>
+    </div>
+  </div> -->
+</div>
+
+<!-- <bb-profile-prize></bb-profile-prize> -->

@@ -1,0 +1,150 @@
+<div class="dashboard-component" *ngIf="!loading">
+  <div class="content">
+
+
+    <div id="myVideo" class="video-container">
+      <img src="assets/images/mahindra/XP.gif">
+    </div>
+    <!-- 
+        <video id="myVid" src="assets/media/brand-videos/XP.mp4" controls
+        ></video> -->
+    <!-- <div class="carousel">
+        <div class="slider" #slider>
+          <div class="slide">
+            <img [src]='modelimg1'>
+          </div>
+          <div class="slide">
+            <img [src]='modelimg1'>
+          </div>
+          <div class="slide">
+            <img [src]='modelimg1'>
+          </div>
+        </div>
+      </div> -->
+    <!-- </div> -->
+    <!-- <div id="myVideo" class="video-container" style="height : 25%" data-flickity='{ "imagesLoaded": true }'>
+      <div class="carousel">
+        <div class="slider" #slider>
+          <div class="slide" *ngFor="let banner of data">
+            <img src="assets/images/mahindra/{{ banner.img }}">
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="decider d-flex" style="text-align: center">
+      <div class="lang-select" style="text-align: center">
+        <!-- <form [formGroup]="OptionForm">
+          <select formControlName="selected" >
+            <option value="English">English</option>
+            <option value="Hindi">हिंदी</option>
+            <option  value="Telugu">తెలుగు</option>
+            <option  value="Tamil">தமிழ்</option>
+          </select>
+        </form> -->
+        Interested to know more
+      </div>
+
+
+      <div class="call-button text-center">
+        <button type="button" (click)="missedcall()">
+          <p>Give a Missed Call</p>
+        </button>
+      </div>
+      <div class="modal" id="exampleModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header text-center">
+              <h5>{{optionvalue?.Call}}</h5>
+              <button type="button" class="close" (click)="missedcallclose()">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div *ngFor="let zonenumber of zone?.zone, let i = index">
+                <div class="option">
+                  <div (click)='ATZoneTrack(i, zonenumber)'>{{zonalstate[i]}}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="brand text-center">
+      <div class="brand-name">
+        <h2>
+          {{optionvalue?.BRAND}}
+        </h2>
+      </div>
+      <div class="brand-desc text-center">
+        <p>{{optionvalue?.DESC_1}}</p>
+        <p>{{optionvalue?.DESC_2}}</p>
+        
+      </div>
+    </div> -->
+    <div class="lang text-center">
+      <p>Mahindra Tractors is the world's No.1 tractor company by volumes and India's no. 1
+        tractor manufacturer since over 30 years. Our tractors support the evolution of the
+        Indian agricultural landscape with innovations and technological advancements. We
+        understand what farmers need and accordingly deliver technological innovations to
+        accelerate farming. Today, we have solutions present across all stages of farming,
+        from land preparation to harvesting.
+        Thus, Mahindra tractors not only make farming tasks easy but also enhance
+        productivity, secure the future of farmers, and enable them to prosper and RISE!</p>
+      <!-- <p style="margin-top: 10px;">{{optionvalue?.CONTENT_1}}</p> -->
+    </div>
+    <div class="range-selector">
+      <h5>Explore Tractor Ranges</h5>
+      <div class="tracters d-flex">
+        <div class="tractor-range text-center" *ngFor="let img of imgs" (click)="gotolang(img)">
+          <div class="display">
+            <img src={{img.img}}>
+            <!-- <p class="title">{{img.desc}}</p> -->
+          </div>
+        </div>
+        <div class="modal" id="exampleModal2">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header text-center">
+                <button type="button" class="close" (click)="modalclose()">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div style="text-align: center;">
+                  <div class="text" *ngFor="let lang of lang_select" (click)="selectlang(lang.value , lang.range)">
+                    {{lang.lang}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div class="footer">
+    <div class="foot dealer" (click)="gotodealer()">
+      <img src="assets/images/mahindra/noun_Store.svg">
+      <div class="foot-text">
+        <p>DEALER</p>
+        <p>LOCATOR</p>
+      </div>
+    </div>
+    <div class="foot share" (click)="gotoshare()">
+      <img src="assets/images/mahindra/Share.svg">
+      <div class="foot-text">
+        <p>SHARE</p>
+        <p>WITH FRIENDS</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <bb-profile-prize></bb-profile-prize> -->
+<!-- <bb-video-player *ngIf="showVideoPopup" [url]="selectedVideo.url" [videoF]="videoflag" (close)="closeVideo()">
+</bb-video-player>
+<bb-video-player *ngIf="showVideoPopup1" [url]="selectedVideo" [videoF]="videoflag" (close)="closeVideo()">
+</bb-video-player> -->

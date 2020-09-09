@@ -1,0 +1,73 @@
+<div class="tnc-component">
+  <div class="container">
+    <div class="content">
+      <div class="decider d-flex">
+        <div class="lang-select">
+          <form [formGroup]="OptionForm">
+            <select formControlName="selected">
+              <option value="All">All States</option>
+              <option value="Andhra Pradesh">Andhra Pradesh</option>
+              <option value="East UP">UP East</option>
+              <option value="Madhya Pradesh">Madhya Pradesh</option>
+              <option value="Rajasthan">Rajasthan</option>
+              <option value="Tamil Nadu">Tamil Nadu</option>
+              <option value="Telangana">Telangana</option>
+              <option value="West UP">UP West</option>
+            </select>
+          </form>
+        </div>
+        <div class="search-container" style="position: absolute;
+        top: 41px;">
+          <form [formGroup]="SearchForm">
+            <input formControlName="search" type="text" placeholder="Enter Pincode" (keypress)="isInputNumber($event)" >
+            <button type="submit" (click)="search()"style="color: #E51937;">Search<i class="fa fa-search"></i></button>
+          </form>
+          <span *ngIf="Error" class="text-danger"style="position: absolute; top: 35px;">{{Errormessage}}</span>
+        </div>
+        <!-- <div class="call-button text-center">
+          <i class="fa fa-phone"></i>
+          <a href="tel:{{modelspecs?.Number}}">{{modelspecs?.Call}}</a>
+        </div> -->
+      </div>
+      <div class="table-body">
+        <table *ngFor="let dealer of dealerspec" style="color: black;">
+          <tr>
+            <th style="color: #E51937;">{{dealer?.Name}}</th>
+          </tr>
+          <tr>
+            <td>Dealer Name</td>
+            <td>{{dealer?.Name}}</td>
+          </tr>
+          <tr>
+            <td>Address</td>
+            <td>{{dealer?.Address}}</td>
+          </tr>
+          <tr>
+            <td>Location</td>
+            <td>{{dealer?.Location}}</td>
+          </tr>
+          <tr>
+            <td>District</td>
+            <td>{{dealer?.District}}</td>
+          </tr>
+          <tr>
+            <td>State</td>
+            <td>{{dealer?.State}}</td>
+          </tr>
+          <tr>
+            <td>EmailID</td>
+            <td>{{dealer?.Email}}</td>
+          </tr>
+          <tr>
+            <td>Contact Person</td>
+            <td>{{dealer?.Contact}}</td>
+          </tr>
+          <tr>
+            <td>Mob No</td>
+            <td>{{dealer?.Mob}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

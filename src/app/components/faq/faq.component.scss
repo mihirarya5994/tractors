@@ -1,0 +1,42 @@
+.faq-component {
+  background: url(src/assets/images/mahindra/Screen.png) no-repeat center center;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  .container {
+    .box {
+      position: absolute;
+      top:430px;
+      width: 90%;
+      @media screen and (min-device-height : 800px) {
+        top:460px;
+    }
+      .congrats {
+        font-family: 'Lato-Bold';
+        color: #E51937;
+      }
+      .congrats-text {
+        font-family: 'Lato-Bold';
+        color: black;
+      }
+      .win-text {
+        font-family: 'Lato-Regular';
+        color: black;
+      }
+      .btn-box {
+        margin-top: 45px;
+        p{
+          position: relative;
+          bottom: 30px;
+          color: white;
+        }
+      }
+    }
+  }
+}
